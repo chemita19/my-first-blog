@@ -13,3 +13,9 @@ if __name__ == "__main__":
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "moveco/static_dir"),
+)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<script type="text/javascript" src="../Javascript/javascript.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Anton|Dosis" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+	</head>
+	<body>
+		<header>
+			<div id="cabecera">
+				<a href="../index.html" style="text-decoration:none; color:black;"><div id="title1">ClasesConRosa</div></a>
+				<div id="title2">Jose María Castro Palacios y Álvaro Montero Carmena</div>
+			</div>
+			<div id="navBar">
+					&nbsp &nbsp &nbsp		
+					<a href="#">Teoria</a>
+					<a href="#">Ejercicios</a>
+			</div> 	
+		</header>
+		<section>
+				<div id="leftMenu">
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="math.html"><li style="text-align: center;">MATH</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="math.html#prop"><li>Propiedades</li></a>
+						<a class="leftMenuItem" href="math.html#metodos"><li>Metodos</li></a>
+						<a class="leftMenuItem" id="enlaceCalculadora"><li>Calculadora</li></a>
+					</ul>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="carga.html"><li style="text-align: center;">CARGA</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="carga.html#cargacomp"><li>Carga de componentes</li></a>
+						<a class="leftMenuItem" href="carga.html#cargapag"><li>Carga de la página</li></a>
+						<a class="leftMenuItem" href="carga.html#descarpag"><li>Descargando la página</li></a>
+					</ul>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="raton.html"><li style="text-align: center;">RATÓN Y TECLADO</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="raton.html#raton"><li>Eventos ratón</li></a>
+						<a class="leftMenuItem" href="raton.html#teclado"><li>Eventos teclado</li></a>
+					</ul>
+				</div>
+				<div id="center">
+					<div id="contenido">
+						<a name="cargacomp"></a>
+						<div class="barraDiv">1. Carga de los componentes de la página. 
+						</div>
+						<p style="font-style: italic;font-weight: bold;">La carga se realiza de arriba a derecha, y “primero” el documento, después “recursos”. <br>
+							¿Cómo se Cargar una página?:<br>
+							+ Cuando se abre por primera vez una página.<br>
+							+ Al recargar/refrescar la página.<br>
+							+ Cuando se regresa después de irse a otra página (enlace, formulario, etc.,).</p>
+
+						<div class="titleTeoria">Load
+						</div>
+							<p>El evento load .Ocurre cuando se terminan de cargarse distintos elementos de una página (window,  document,  body, frame, iframe, img, link, script, style).<br>
+								+ Este evento no se produce cuando la página se carga desde memoria caché.<br>
+								+ Utilizar cuando  un script necesite que  una página web haya cargado completamente todo el contenido (incluidas imágenes, archivos script, CSS, etc.).</p>
+						<div class="titleTeoria">DOMContentLoaded
+						</div>
+							<p> El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado, sin esperar hojas de estilo, images y subframes para  finalizar la<br>carga, es decir el documento ha terminado de cargar (pero no sus recursos dependientes).<br>
+							+ Se puede utilizar para insertar o modificar el DOM, y cualquier otra acción antes de terminar de cargar todo los recursos de la página.</p>
+						<div class="titleTeoria">readyState
+						</div>
+							<p>Propiedad de document que describe el estado de carga del documento.<br>
+								+Los posibles valores son:<br>
+								-“loading” cargando: El documento todavía se está cargando.<br>
+								-“interactive” interactivo: El documento ha terminado de cargarse y el documento se ha analizado, pero los sub-recursos como imágenes, hojas de estilo y marcos <br>todavía se están cargando.<br>
+								+En esta fase, ya podemos acceder a los elementos DOM, pero, generalmente no al resto de recursos.<br>
+								+Se produce a “continuación” el evento DOMContentLoaded.<br>
+								-“complete” Completado: El documento y todos los sub-recursos han terminado de cargar.<br>
+								+ Este estado indica que el evento load está a punto de dispararse.<br>
+								+Cuando cambia el valor de esta propiedad, se dispara el evento readystatechange  en el objeto  document.</p>
+						<div class="titleTeoria">readystatechange
+						</div>
+							<p>El evento readystatechange se dispara en el objeto document, cuando la propiedad document.readyState, cambia de valor.<br>
+								+ Este evento es una alternativa a los eventos DOMContentLoaded   (interactive ) y load  (complete).<br>
+								+ La propiedades más características  de este evento son:  type, target, bubbles y cancelable.</p>
+
+						<a name="cargapag"></a>
+						<div class="barraDiv">2. Carga de la página. 
+						</div>
+						<div class="titleTeoria">pageshow
+						</div>
+							<p>El evento Pageshow  ocurre cuando se visualiza una página web.<br>
+								-El evento pageshow, a diferencia del evento load, se produce cada vez que se carga  o recarga la página.</p>
+						<div class="titleTeoria">resize
+						</div>
+							<p>El evento  resize se produce  cuando se redimensiona la ventana del navegador, o el frame, en caso de que la página los tenga.<br>
+								-Se produce de forma ininterrumpida hasta que deja de dimensionar.</p>
+						<div class="titleTeoria">scroll
+						</div>
+							<p>El evento  scroll  ocurre cuando varía la posición de la barra de desplazamiento (scroll) de un elemento(window,body, div, form, pre,.. ). También cuando se<br>mueve la rueda de ratón.<br>
+								-Al igual que resize se produce de “forma continuada”.<br>
+								-Nota: use la propiedad de estilo overflow CSS para crear una barra de desplazamiento para un elemento.</p>
+						<div class="titleTeoria">hashchange
+						</div>
+							<p>El evento hashchange hashchange ocurre cuando se cambia la parte de la URL que comienza con el símbolo '#'.<br>
+								Este evento se invoca: <br>
+								-Al cambiar la parte del anclaje con las propiedades: location.hash o location.href del objeto Location.<br>
+								-Navega a la página actual con un marcador diferente (usa los botones "atrás" o "avanzar").<br>
+								-Hacer clic en un enlace a un marcador de marcador.</p>
+
+						<a name="descarpag"></a>
+						<div class="barraDiv">3. Descargando la página. 
+						</div>
+						<p style="font-style: italic;font-weight: bold;">¿Cómo se Descargar una página?:
+								+ Cerrando la ventana del navegador.<br>
+								+ Al recargar/refrescar la página.<br>
+								+ Se abandona/se navega fuera de la página:<br>
+								-Haciendo clic en un enlace que nos lleve a otra página.<br>
+								-Enviando un formulario.</p>
+						<div class="titleTeoria">beforeunload
+						</div>
+							<p>El evento  beforeunload  ocurre cuando el documento está a punto de ser descargado.<br>
+								+ Al producirse este evento, el documento todavía es visible y la descarga de la página se puede cancelar solo en este punto<br>
+								+ Este evento, permite realizar acciones (mostrar un mensaje en un cuadro de diálogo de confirmación para informar al usuario si desea quedarse o abandonar la <br>página actual) antes de descargar completamente (unload) la página.<br>
+								Para “cancelar” disponemos de:<br>
+								El método de evento: preventDefault().<br>
+								La propiedad de evento: returnValue.<br>
+								O enviado como return una cadena distinta<br>  
+								+Por defecto se visualiza un mensaje predeterminado que aparece en el cuadro de confirmación es diferente en diferentes navegadores. Sin embargo, el mensaje <br>estándar es algo así como "¿Seguro que quieres salir de esta página?". Este mensaje no puede ser eliminado.<br>
+								-Se puede escribir un mensaje personalizado junto con el mensaje predeterminado. </p>
+								<div class="notaMargen">
+									A partir del 25 de Mayo del 2011, la especificación HTML5 establece que llamadas a los métodos <b>window.alert(), window.confirm(), </b>y<b> window.prompt() </b>pueden ser <br>ignoradas durante este evento.<br>
+									+Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmación en absoluto. El documento siempre se descargara <br>automáticamente.<br>
+								</div>
+						<div class="titleTeoria">pagehide
+						</div>
+							<p>El evento pagehide ocurre cuando deja  visualizarse la página.</p>
+						<div class="titleTeoria">unload
+						</div>
+							<p>El evento unload ocurre cuando se descarga completamente distintos elementos de una página.</p>
+					</div>
+				</div>
+		</section>
+		<footer>
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<script type="text/javascript" src="../Javascript/javascript.js"></script>
+		<script type="text/javascript" src="../Javascript/mathJs.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Anton|Dosis" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+	</head>
+	<body>
+		<header>
+			<div id="cabecera">
+				<a href="../index.html" style="text-decoration:none; color:black;"><div id="title1">ClasesConRosa</div></a>
+				<div id="title2">Jose María Castro Palacios y Álvaro Montero Carmena</div>
+			</div>
+			<div id="navBar">
+					&nbsp &nbsp &nbsp		
+					<a href="#">Teoria</a>
+					<a href="#">Ejercicios</a>
+			</div> 	
+		</header>
+		<section>
+				<div id="leftMenu">
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="math.html"><li style="text-align: center;">MATH</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="math.html#prop"><li>Propiedades</li></a>
+						<a class="leftMenuItem" href="math.html#metodos"><li>Metodos</li></a>
+						<a class="leftMenuItem" id="enlaceCalculadora"><li>Calculadora</li></a>
+					</ul>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="carga.html"><li style="text-align: center;">CARGA</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="carga.html#cargacomp"><li>Carga de componentes</li></a>
+						<a class="leftMenuItem" href="carga.html#cargapag"><li>Carga de la página</li></a>
+						<a class="leftMenuItem" href="carga.html#descarpag"><li>Descargando la página</li></a>
+					</ul>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="raton.html"><li style="text-align: center;">RATÓN Y TECLADO</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="raton.html#raton"><li>Eventos ratón</li></a>
+						<a class="leftMenuItem" href="raton.html#teclado"><li>Eventos teclado</li></a>
+					</ul>
+				</div>
+				<div id="center">
+					<div id="contenido">
+						<div class="barraDiv">1. Objeto Math.</div>
+							<p style="font-style: italic;font-weight: bold;">
+							Math es un objeto incorporado, por lo que no es necesario declarar una nueva instancia del objeto para invocar sus propiedades o métodos.<br>
+							Math contiene diversas constantes y funciones matemáticas, que permiten realizar operaciones matemáticas más complejas en JavaScript.</p>
+						<a name="prop">
+						<div class="barraSubDiv">1.1 Propiedades</div>
+						<h4 style="margin-left: 20px;">Las propiedades de este objeto son constantes con valores muy empleados en matemáticas:
+						</h4>
+						<ul>
+							<li><b>E: </b> Constante de Euler, o número e.<br></li>
+							<li><b>LN2: </b> Logaritmo natural de 2.<br></li>
+							<li><b>LN10: </b> Logaritmo natural de 10.<br></li>
+							<li><b>LOG2E: </b> Logaritmo de la constante de Euler en base 2.<br></li>
+							<li><b>LOG10E: </b> Logaritmo de la constante de Euler en base 10.<br></li>
+							<li><b>PI: </b> Numero Pi (π) para cálculos con circunferencias.<br></li>
+							<li><b>SQRT2: </b> Raíz cuadrada de 2.<br></li>
+							<li><b>SQRT1_2: </b> Raíz cuadrada de ½ (0,5).</li>
+						</ul>
+						<a name="metodos">
+						<div class="barraSubDiv">1.2 Métodos</div>
+						<h4 style="margin-left: 20px;">Los métodos de Math se corresponden con las funciones matemáticas más utilizadas.<br>
+							Generalmente, estas funciones, si reciben una cadena, intentarán convertirla en número, pero si no tienen éxito devuelven el valor NaN.
+						</h4>
+							<h4 class="miniTitle">Funciones “conocidas"</h4>
+							<ul>
+							<li><b>abs(número):</b> Devuelve el valor absoluto de número.</li>
+							<li><b>pow(x, y):</b> Exponenciación. Calcula x elevado a y.</li>
+							<li><b>sqrt(número):</b>	sqrt(x) Devuelve la raíz cuadrada de número. Si el número es negativo devuelve NaN.</li>
+							<li><b>random():</b> Devuelve un número aleatorio comprendido entre 0 (incluido) y 1 (no incluido).</li>
+							<li><b>cbrt(número):</b> Devuelve la raíz cúbica de número.</li>
+							</ul>
+							<button id="ejemplo1" class="botonEjemplo">Ejemplo</button>
+							<div id="divEjemplo1" class="divEjemplo">
+								<ul>
+									<li><b>Math.abs(-10) =</b> 10</li>
+									<li><b>Math.pow(2, 3) =</b> 8</li>
+									<li><b>Math.sqrt(25) =</b> 5</li>
+									<li><b>Math.cbrt(8) = </b> 2</li>
+								</ul>
+							</div>
+
+							<h4 class="miniTitle">Redondean números con partes decimales</h4>
+							<ul>
+							<li><b>ceil(numero):</b> Redondea número hacia arriba.</li>
+							<li><b>floor(numero):</b> Redondea número hacia abajo.</li>
+							<li><b>round(numero):</b> Redondea o devuelve el entero más cercano por arriba o por abajo.</li>
+							<li><b>trounc(numero):</b> Devuelve la parte entera de un número.</li>
+							</ul>
+							<button id="ejemplo2" class="botonEjemplo">Ejemplo</button>
+							<div id="divEjemplo2" class="divEjemplo">
+								<ul>
+									<li><b>Math.ceil(10,4) =</b> 10</li>
+									<li><b>Math.floor(10,6) =</b> 11</li>
+									<li><b>Math.round(5,6) =</b> 6</li>
+									<li><b>Math.trounc(5,73) = </b> 5</li>
+								</ul>
+							</div>
+
+							<h4 class="miniTitle">Devuelve número según el valor del argumento</h4>
+							<ul>
+							<li><b>min([num1[, num2]...]):</b>Devuelve num1 o numN en función de cuál sea el menor de ellos.</li>
+							<li><b>max([num1[, num2]...]):</b> Devuelve num1 o numN en función de cuál sea el mayor de ellos.</li>
+							<p style="color:red">
+							-Sin parámetros <b>max()</b> devuelve -Infinity y <b>min()</b> devuelve Infinity. <br>
+							-No hay límite para el número de parámetros que puede recibir.</p>
+							</ul>
+							<button id="ejemplo3" class="botonEjemplo">Ejemplo</button>
+							<div id="divEjemplo3" class="divEjemplo">
+								<ul>
+									<li><b>Math.min(1,3,2,4) =</b> 1</li>
+									<li><b>Math.max(1,5,4,9) =</b> 9</li>
+								</ul>
+							</div>
+
+							<h4 class="miniTitle">	Funciones trigonométrica, trigonométricas inversas e hiperbólicas</h4>
+							<ul>
+							<li><b>cos(numero):</b> Devuelve el coseno de número (en radianes).</li>
+							<li><b>cosh(numero):</b> Devuelve el coseno hiperbólico de número.</li>
+							<li><b>sin(numero):</b> Devuelve el seno de número (en radianes).</li>
+							<li><b>sinh(numero):</b> Devuelve el seno hiperbólico de número.</li>
+							<li><b>tan(numero):</b> Devuelve la tangente de número (en radianes).</li>
+							<li><b>tan(numero):</b> Devuelve la tangente de número (en radianes).</li>
+							<li><b>tanh(numero):</b> Devuelve la tangente hiperbólica de número.</li>
+							<li><b>acos(numero):</b> Devuelve el arco coseno de número (en radianes).</li>
+							<li><b>acosh(numero):</b> Devuelve el arco coseno hiperbólico de número.</li>
+							<li><b>asin(numero):</b> Devuelve el arco seno de número (en radianes).</li>
+							<li><b>asinh(numero):</b> Devuelve el arco seno hiperbólico de número.</li>
+							<li><b>atan(numero):</b> Devuelve el arco tangente de número (en radianes).</li>
+							<li><b>atanh(numero):</b> Devuelve el arco tangente hiperbólico de número.</li>
+							<li><b>atan2(numero, número):</b> Devuelve el arco tangente del cociente de los números.</li>
+							</ul>
+							<button id="ejemplo4" class="botonEjemplo">Ejemplo</button>
+							<div id="divEjemplo4" class="divEjemplo">
+								<ul>
+									<li><b>Math.cos(20) =</b> 0.40808206</li>
+									<li><b>Math.sinh(15) =</b> 0.25881905</li>
+									<li><b>Math.acos(5,6) =</b> 6</li>
+									<li><b>Math.atan(123) = </b> 1.56266642</li>
+									<li><b>Math.tanhn(23) = </b> 87.51044708</li>
+								</ul>
+							</div>
+
+							<h4 class="miniTitle">Exponenciación y logaritmo, base E</h4>
+							<ul>
+							<li><b>exp(numero):</b> Exponenciación.</li>
+							<li><b>log(numero):</b> Devuelve el logaritmo natural de número.</li>
+							<p style="color:red">
+							-Si número es negativo, devuelve NaN.<br>
+							-Si número es 0, devuelve  -Infinity.</p>
+							</ul>
+							<button id="ejemplo5" class="botonEjemplo">Ejemplo</button>
+							<div id="divEjemplo5" class="divEjemplo">
+								<ul>
+									<li><b>Math.exp(10) =</b> 22026.4657948</li>
+									<li><b>Math.log(15) =</b> 2.70805020110221</li>
+								</ul>
+							</div>
+					</div>
+				</div>
+		</section>
+		<footer>
+		</footer>
+
+	</body>
+</html>

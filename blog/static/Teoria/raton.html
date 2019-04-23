@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<script type="text/javascript" src="../Javascript/javascript.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Anton|Dosis" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+	</head>
+	<body>
+		<header>
+			<div id="cabecera">
+				<a href="../index.html" style="text-decoration:none; color:black;"><div id="title1">ClasesConRosa</div></a>
+				<div id="title2">Jose María Castro Palacios y Álvaro Montero Carmena</div>
+			</div>
+			<div id="navBar">
+					&nbsp &nbsp &nbsp		
+					<a href="#">Teoria</a>
+					<a href="#">Ejercicios</a>
+			</div> 	
+		</header>
+		<section>
+				<div id="leftMenu">
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="math.html"><li style="text-align: center;">MATH</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="math.html#prop"><li>Propiedades</li></a>
+						<a class="leftMenuItem" href="math.html#metodos"><li>Metodos</li></a>
+						<a class="leftMenuItem" id="enlaceCalculadora"><li>Calculadora</li></a>
+					</ul>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="carga.html"><li style="text-align: center;">CARGA</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="carga.html#cargacomp"><li>Carga de componentes</li></a>
+						<a class="leftMenuItem" href="carga.html#cargapag"><li>Carga de la página</li></a>
+						<a class="leftMenuItem" href="carga.html#descarpag"><li>Descargando la página</li></a>
+					</ul>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="raton.html"><li style="text-align: center;">RATÓN Y TECLADO</li></a></h4>
+					<ul>
+						<a class="leftMenuItem" href="raton.html#raton"><li>Eventos ratón</li></a>
+						<a class="leftMenuItem" href="raton.html#teclado"><li>Eventos teclado</li></a>
+					</ul>
+				</div>
+				<div id="center">
+					<div id="contenido">
+						<a name="raton">
+						<div class="barraDiv">1. Eventos del ratón. </div>
+						<div class="barraSubDiv">1.1 Eventos de puntero</div>
+							<div style="margin-left: 30px;">
+								<div class="titleTeoria">mousemove</div>
+									<p>- El evento mousemove ocurre cuando se mueve el ratón mientras esta sobre un elemento.<br>
+										Este evento se produce continuamente, mientras el ratón permanece dentro del elemento.</p>
+								<div class="titleTeoria">mouseout</div>
+									<p>- El evento mouseout ocurre cuando el ratón está dentro de un elemento y se mueve fuera de ese elemento, o fuera de uno de sus elementos secundarios.</p>
+								<div class="titleTeoria">mouseleave</div>
+									<p>- El evento mouseleave ocurre cuando el ratón está dentro de un elemento y se mueve fuera de ese elemento, pero no a sus elementos secundarios<br>
+									(no burbujea: no se propaga por la jerarquía del documento).</p>
+								<div class="titleTeoria">mouseover</div>
+									<p>- El evento mouseover ocurre cuando el ratón esta fuera de un elemento y se mueve a dentro de ese elemento, o a uno de sus elementos secundarios.</p>
+								<div class="titleTeoria">mouseenter</div>
+									<p>- El evento mouseenter ocurre cuando el ratón esta fuera de un elemento y se mueve a dentro de ese elemento, pero no a sus elementos secundarios <br>
+									(no burbujea: no se propaga por la jerarquía del documento).</p>
+							</div>
+						<div class="barraSubDiv">1.1 Eventos de click</div>
+							<div style="margin-left: 30px;">
+							<div class="titleTeoria">mousedown</div>
+								<p>- Mousedown ocurre cuando se “pincha/presiona” un botón del ratón sobre un elemento.</p>
+								<div class="titleTeoria">mouseup</div>
+								<p>- El evento mouseup ocurre cuando se suelta el botón del ratón, que previamente había sido pulsado sobre un elemento.</p>
+								<div class="titleTeoria">click</div>
+								<p>- El evento click ocurre cuando se hace click, generalmente, con el botón izquierdo del ratón sobre el elemento.</p>
+								<div class="titleTeoria">dblclick</div>
+								<p>- El evento dblclick ocurre cuando se hace doble click sobre el elemento.</p>
+								<div class="titleTeoria">contextmenu</div>
+								<p>- El evento contextmenu,contextmenu, ocurre cuando se hace clic derecho en un elemento para abrir  el menú contextual.<br></p>
+								<div class="notaMargen">Aunque el evento es compatible con todos los navegadores, el atributo “actualmente” solo es compatible con Firefox.</div>
+							</div>
+						<div class="barraSubDiv">1.1 Eventos de la rueda</div>
+							<div style="margin-left: 30px;">
+								<div class="titleTeoria">wheel</div>
+								<p>El evento wheel ocurre cuando la rueda del mouse se desplaza hacia arriba o hacia abajo sobre un elemento.</p>
+								<div class="notaMargen">El evento wheel también ocurre cuando el usuario se desplaza o se acerca o aleja de un elemento mediante el uso de una pantalla táctil (como el "mouse" de un ordenador portátil).</div>
+							</div>
+
+						<a name="teclado">
+						<div class="barraDiv">2. Eventos del teclado. </div>
+							<div class="titleTeoria">keydown</div>
+								<p>- El evento keydown ocurre cuando se presiona cualquier tecla del teclado, independientemente de que se suelte o no se suelte a continuación.</p>
+									<div class="notaMargen">Si la mantenemos pulsada el evento se repetirá una y otra vez hasta que soltemos la tecla.</div>
+							<div class="titleTeoria">keypress</div>
+								<p>- El evento keypress ocurre cuando se mantiene pulsada una tecla del teclado.</p>
+								<div class="notaMargen">Antes de este evento se produce un keydown en el momento que se pulsa la tecla.<br>
+								El evento keypress no se activa para todas las teclas (por ejemplo, ALT, CTRL, SHIFT, ESC, barra espaciadora, etc.) en todos los navegadores. </br>
+								Para detectar solo si el usuario ha presionado una tecla, se recomienda el uso de keydown.</div>
+							<div class="titleTeoria">keyup</div>
+								<p>- El evento keyup ocurre cuando se suelta, una tecla, que previamente había sido pulsada. </p>
+								
+					</div>
+				</div>
+		</section>
+		<footer>
+		</footer>
+
+	</body>
+</html>

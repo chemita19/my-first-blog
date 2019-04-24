@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		{% load static %}
 		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-		<script type="text/javascript" src="javascript.js"></script>
+		<script type="text/javascript" src="{% static 'Javascript/javascript.js' %}"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
@@ -50,6 +50,15 @@
 				<div id="center">
 					<div id="title3">ClasesConRosa</div>
 					<div style="text-align: center; font-family: 'Anton', sans-serif; font-size: 20px;">TRABAJO REALIZADO POR ÁLVARO MONTERO CARMENA Y JOSÉ MARIA CASTRO PALACIOS, WEB REALIZADA CON HTML5, CSS3, JAVASCRIPT Y JQUERY</div>
+VISITANTES: {% for post in posts %} {{ post.nombre }},{% endfor %} Registra tu visita <a id="mostrarBoton" href="{% url 'post_new' %}">aquí</a>
+	<div id="botonAnadir" style="visibility:visible">
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Nombre del visitante</button>
+    </form>
+	</div>
+
+
 					<div id="imagenesMovimiento" style="margin: auto; max-width:78%; min-height:400px;">
 						<img src="{% static 'javascript_logo.png' %}" width="300">
 						<img src="{% static 'HTML5CSS3Logos.svg' %}" width="480">

@@ -1,7 +1,12 @@
-window.addEventListener("load", alcargar, false);
+window.addEventListener("DOMContentLoaded", alcargar, false);
 function alcargar(){
 	document.getElementById("enlaceCalculadora").addEventListener('click',calculadora,false);
+	if(window.location.href == "http://127.0.0.1:8000/post/new/"){
+		$('#anadirBoton').show();
+	}
 }
+
+
 
 function calculadora(){
 	var centro = $('#center');

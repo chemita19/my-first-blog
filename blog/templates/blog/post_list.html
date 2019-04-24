@@ -28,32 +28,32 @@
 		<section>
 				<div id="leftMenu">
 {% load static %}
-					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="Teoria/math.html"><li style="text-align: center;">MATH</li></a></h4>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="{% static 'Teoria/math.html' %}"><li style="text-align: center;">MATH</li></a></h4>
 					<ul>
 {% load static %}
 						<a class="leftMenuItem" href="{% static 'Teoria/math.html' %}"><li>Propiedades</li></a>
-						<a class="leftMenuItem" href="Teoria/math.html#metodos"><li>Metodos</li></a>
+						<a class="leftMenuItem" href="{% static 'Teoria/math.html' %}"><li>Metodos</li></a>
 						<a class="leftMenuItem" id="enlaceCalculadora"><li>Calculadora</li></a>
 					</ul>
-					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="Teoria/math.html"><li style="text-align: center;">CARGA</li></a></h4>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="{% static 'Teoria/carga.html' %}"><li style="text-align: center;">CARGA</li></a></h4>
 					<ul>
-						<a class="leftMenuItem" href="Teoria/carga.html#cargacomp"><li>Carga de componentes</li></a>
-						<a class="leftMenuItem" href="Teoria/carga.html#cargapag"><li>Carga de la página</li></a>
-						<a class="leftMenuItem" href="Teoria/carga.html#descarpag"><li>Descargando la página</li></a>
+						<a class="leftMenuItem" href="{% static 'Teoria/carga.html' %}"><li>Carga de componentes</li></a>
+						<a class="leftMenuItem" href="{% static 'Teoria/carga.html' %}"><li>Carga de la página</li></a>
+						<a class="leftMenuItem" href="{% static 'Teoria/carga.html' %}"><li>Descargando la página</li></a>
 					</ul>
-					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="Teoria/raton.html"><li style="text-align: center;">RATÓN Y TECLADO</li></a></h4>
+					<h4 style="text-align: center; margin-top:10px;"><a class="leftMenuItem" href="{% static 'Teoria/raton.html' %}"><li style="text-align: center;">RATÓN Y TECLADO</li></a></h4>
 					<ul>
-						<a class="leftMenuItem" href="Teoria/raton.html#raton"><li>Eventos ratón</li></a>
-						<a class="leftMenuItem" href="Teoria/raton.html#teclado"><li>Eventos teclado</li></a>
+						<a class="leftMenuItem" href="{% static 'Teoria/raton.html' %}"><li>Eventos ratón</li></a>
+						<a class="leftMenuItem" href="{% static 'Teoria/raton.html' %}"><li>Eventos teclado</li></a>
 					</ul>
 				</div>
 				<div id="center">
 					<div id="title3">ClasesConRosa</div>
 					<div style="text-align: center; font-family: 'Anton', sans-serif; font-size: 20px;">TRABAJO REALIZADO POR ÁLVARO MONTERO CARMENA Y JOSÉ MARIA CASTRO PALACIOS, WEB REALIZADA CON HTML5, CSS3, JAVASCRIPT Y JQUERY</div>
 					<div id="imagenesMovimiento" style="margin: auto; max-width:78%; min-height:400px;">
-						<img src="javascript_logo.png" width="300">
-						<img src="HTML5CSS3Logos.svg" width="480">
-						<img src="jquery_logo.png" width="300">
+						<img src="{% static 'javascript_logo.png' %}" width="300">
+						<img src="{% static 'HTML5CSS3Logos.svg' %}" width="480">
+						<img src="{% static 'jquery_logo.png' %}" width="300">
 					</div>
 				</div>
 		</section>

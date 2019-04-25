@@ -12,6 +12,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Anton|Dosis" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
 	</head>
 	<body>
@@ -52,12 +53,13 @@
 					<div id="title3">ClasesConRosa</div>
 					<div style="text-align: center; font-family: 'Ubuntu', sans-serif; font-size: 20px;">TRABAJO REALIZADO POR ÁLVARO MONTERO CARMENA Y JOSÉ MARIA CASTRO PALACIOS, WEB REALIZADA CON HTML5, CSS3, JAVASCRIPT Y JQUERY. LA WEB ESTÁ SOPORTADA POR PYTHONANYWHERE, LA WEB ESTÁ REALIZADA CON EL FRAMEWORK DE PYTHON, DJANGO QUE SE BASA EN EL SISTEMA DE MODELO-VISTA-CONTROLADOR.
 				<br>
-{% block content %}
-				<br>
-				ÚLTIMOS 10 VISITANTES: <div style="height: 140px; overflow:scroll; font-size: 19px; margin:auto; width:600px;"><ul style="list-style-type: none;margin: 0;padding: 0;">{% for post in posts %}<li>{{ post.nombre }}  {{ post.created_date }}{% endfor %}</ul> </div>
 
-{% endblock content %}
-				Registra tu visita <a id="mostrarBoton" href="{% url 'post_new' %}">aquí</a>
+    <form method="POST" class="post-form">
+		{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">REGISTRAR</button>
+    </form>
+
 </div>
 
 					<div id="imagenesMovimiento" style="margin: auto; max-width:78%;">
@@ -73,3 +75,5 @@
 
 	</body>
 </html>
+
+
